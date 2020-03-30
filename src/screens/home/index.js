@@ -4,24 +4,7 @@ import CardMenu from "../../components/cardMenu";
 import CardBox from "../../components/cardBox";
 
 const HomeScreen = props => {
-  const [cardAll, setCardAll] = useState([]);
-
-  const ENDPOINT = "https://meetingvmix.herokuapp.com/meeting";
-
-  const getApi = async () => {
-    let response = await fetch(ENDPOINT);
-    //{ method: "POST", body: "id:1" });
-    let data = await response.json();
-    
-    setCardAll(data);
-  };
-
-  useEffect(() => {
-    getApi();
-    console.log(getApi);
-  }, []);
   
-// função pra ler querystring
   //var nickname=" sadas";
   function queryString (){
     let loc=window.location.search.substring(1, window.location.search.length);   
@@ -33,27 +16,40 @@ const HomeScreen = props => {
   };
 
   return (
-    <div id="HomeScreen"  onLoad={queryString} >
-      <div id="card-menu" onLoad={queryString}>
-      <h1 id="card-welcome">
-        <span>Olá, </span>
-        <span id="user"></span>
-      </h1>
-      <div id="card-menu-buttons" />
+    <div onLoad={queryString}>
+    <div id="lista-do-header">
+      
+      <div>
+        <h1 id='logo'>Olá, <span id="user">erro</span> XD</h1>
+      </div>
+      <div><img class="click" id="logo2" alt="dark mode"  src="https://img.icons8.com/ios-filled/50/000000/moon.png"/></div>
     </div>
-      {cardAll.map((item, idx) => {
-        return (
-          <CardBox
-            title={item.title}
-            description={item.description}
-            date={item.date}
-            host={" " + item.host}
-            startTime={item.startTime}
-            endTime={item.endTime}
-            room={item.room}
-          />
-        );
-      })}
+    <div id="bodypag">
+      <ul id="app-filter">
+
+        <li class="filter selected" id="all">
+          <h1>Todos</h1>
+        </li>
+
+        <li class="filter" id="imaginedragons" >
+          <h1>Imagine Dragons</h1>
+        </li>
+
+        <li class="filter" id="aaron" >
+          <h1>Aaron Smith</h1>
+        </li>
+
+        <li class="filter" id="moon" >
+          <h1>Moon Taxi</h1>
+        </li>
+      </ul>
+      <div id="divisor" />
+
+      <div id="container">
+      </div>
+      <div id="container1">
+      </div>
+    </div>
     </div>
   );
 };

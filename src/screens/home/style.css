@@ -1,26 +1,79 @@
 #HomeScreen {
   user-select: none;
 }
-#card-menu {
-  background: #b9c8ff;
-  margin: 15px;
-  border-radius: 20px;
-  font-family: Poppins;
-  animation: FadeBlur 0.2s;
-}
-
-#card-welcome {
-  padding: 35px;
-  color: #ffffff;
-  text-shadow: 0px 0px 2px rgba(160, 160, 160 0.7);
-  font-size: 1.5em;
-}
-
-#card-welcome span {
+#lista-do-header {
   color: white;
+  transition: 1000ms;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  flex: 1;
+  flex-direction: line;
+  align-self: center;
 }
 
-#card-menu-buttons {
-  width: 200px;
-  height: 180px;
+#logo2 {
+  margin-top: 10px;
+  width: 45px;
+  height:45px;
+}
+#logo {
+  color:#70C1FE;
+  margin-top: 20px;
+  margin-left: 15px;
+  font-size: 18px;
+}
+
+.click {
+  cursor: pointer;
+}
+.click:active {
+  transform: scale(0.9);
+}
+
+#bodypag {
+  width: 100%;
+  transition: 1000ms;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#app-filter {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 16px 0px;
+  justify-content: space-between;
+  transition: 500ms;
+}
+
+#app-filter li {
+  margin: 0px 8px;
+}
+
+#app-filter h1 {
+  font-size: 12px;
+  padding: 16px;
+  cursor: pointer;
+}
+
+#app-filter .selected {
+  border-radius: 10px;
+  color: white;
+  background-color: #70c1fe;
+}
+#divisor {
+  background-color: #70c1fe;
+  width: 90%;
+  height: 1px;
+}
+ul:focus {
+  outline: 0;
+}
+li:focus {
+  outline: 0;
 }
