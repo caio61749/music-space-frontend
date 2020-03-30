@@ -1,0 +1,187 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+#card-meeting {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 50px;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px 0px rgba(167, 167, 167, 0.2);
+  transition: all 0.5s;
+  user-select: none;
+}
+
+#card-meeting #meeting-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-right: 10px;
+  padding: 15px;
+}
+
+#meeting-info h1 {
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0px;
+}
+
+#meeting-info h2 {
+  font-size: 0.8em;
+  padding: 0px;
+  margin: 0px;
+}
+
+#card-meeting img {
+  object-fit: cover;
+  object-position: 0px 0px;
+  width: 50%;
+  box-shadow: 0px 0px 30px 0px rgba(167, 167, 167, 0.08);
+  height: 300px;
+  padding: 0;
+  margin: 1vh;
+  border-radius: 20px;
+}
+
+#meeting-room {
+  border-radius: 3px;
+  padding: 0px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background: #7b96f8;
+  color: white !important;
+  text-align: center;
+  margin: 0 !important;
+  position: relative;
+  top: 30px;
+  left: 20px;
+}
+
+#meeting-room h2 {
+  color: white !important;
+  font-weight: 100;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 0.6em !important;
+}
+
+#meeting-room h1 {
+  color: white !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#meeting-date {
+  text-align: left;
+  margin-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20%;
+}
+
+#meeting-info #meeting-title {
+  color: #3873e5;
+  transition: all 0.5s;
+  /* color: #A1A2B9; */
+}
+
+#meeting-info #meeting-description {
+  padding: 10px;
+  font-family: Poppins;
+  color: #a1a2b9;
+  transition: all 0.5s;
+  text-align: justify;
+}
+
+#meeting-date span {
+  color: #3b3b46;
+  transition: all 0.5s;
+}
+#meeting-date h2 {
+  color: #a1a2b9;
+  transition: all 0.5s;
+}
+@media screen and (max-width: 330px) {
+  #meeting-info #meeting-room {
+    top: 50%;
+    transition: all 0.5s;
+  }
+  #card-meeting {
+    display: block;
+    padding: 25px;
+    margin: 0px;
+    min-width: 80%;
+    transition: all 0.5s;
+  }
+  #card-meeting img {
+    width: 98%;
+    margin: 0;
+    object-position: 80% 0px;
+    transition: all 0.5s;
+  }
+  #card-meeting #meeting-description {
+    margin: 0;
+    transition: all 0.5s;
+  }
+}
+
+@media screen and (max-width: 595px) {
+  #meeting-info #meeting-room {
+    top: 50%;
+    transition: all 0.5s;
+  }
+  #card-menu {
+    margin: 5px;
+    transition: all 0.5s;
+  }
+  #card-menu-buttons {
+    height: 150px;
+    transition: all 0.5s;
+  }
+  #card-meeting {
+    display: block;
+    padding: 25px;
+    margin: 15px;
+    min-width: 200px;
+    transition: all 0.5s;
+  }
+  #card-meeting img {
+    width: 98%;
+    margin: 0;
+    object-position: 50% 0px;
+    transition: all 0.5s;
+  }
+  #card-meeting #meeting-description {
+    text-align: justify;
+    margin: 0;
+    transition: all 0.5s;
+  }
+}
+
+@media screen and (max-width: 695px) {
+  #card-meeting img {
+    object-position: 50% 0px;
+    transition: all 0.5s;
+  }
+}
+
+@keyframes FadeBlur {
+  0% {
+    filter: blur(2em);
+    transition: all 100s;
+  }
+  100% {
+    filter: blur(0px);
+    transition: all 100s;
+  }
+}

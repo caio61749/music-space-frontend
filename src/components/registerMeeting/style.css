@@ -1,0 +1,248 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+#background {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+#card-filter {
+  display: flex;
+  flex-direction: row;
+  max-width: 800px;
+  align-self: center;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 50px 0px rgba(167, 167, 167, 0.2) !important;
+  transition: all 0.5s;
+  user-select: none;
+}
+
+#card-filter img {
+  object-fit: cover;
+  object-position: 0px 0px;
+  width: 100%;
+  box-shadow: 0px 0px 30px 0px rgba(167, 167, 167, 0.08);
+  height: 530px;
+  padding: 0;
+  margin: 1vh;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 330px) {
+  #card-filter {
+    display: block;
+    padding: 25px;
+    margin: 0px;
+    min-width: 80%;
+    transition: all 0.5s;
+  }
+  #card-filter img {
+    width: 98%;
+    margin: 0;
+    object-position: 80% 0px;
+    transition: all 0.5s;
+  }
+  #card-filter #meeting-description {
+    margin: 0;
+    transition: all 0.5s;
+  }
+}
+
+@media screen and (max-width: 595px) {
+  #meeting-info #meeting-room {
+    top: 50%;
+    transition: all 0.5s;
+  }
+  #card-menu {
+    margin: 5px;
+    transition: all 0.5s;
+  }
+  #card-menu-buttons {
+    height: 150px;
+    transition: all 0.5s;
+  }
+  #card-filter {
+    display: block;
+    padding: 25px;
+    min-width: 200px;
+    transition: all 0.5s;
+  }
+  #card-filter img {
+    width: 98%;
+    margin: 0;
+    object-position: 50% 0px;
+    transition: all 0.5s;
+  }
+  #card-filter #meeting-description {
+    text-align: justify;
+    margin: 0;
+    transition: all 0.5s;
+  }
+}
+
+@media screen and (max-width: 695px) {
+  #card-filter img {
+    object-position: 50% 0px;
+    transition: all 0.5s;
+  }
+}
+
+@keyframes FadeBlur {
+  0% {
+    filter: blur(2em);
+    transition: all 100s;
+  }
+  100% {
+    filter: blur(0px);
+    transition: all 100s;
+  }
+}
+
+/*  */
+
+#hour-filter {
+  display: flex;
+  flex-direction: row;
+}
+
+#hour-filter input {
+  width: 75px !important;
+  font-size: 0.8em;
+  text-align: center !important;
+}
+#hour-filter input::placeholder {
+  text-align: center !important;
+}
+
+#img-left {
+  display: flex;
+  flex: 1;
+}
+#info-right {
+  display: flex;
+  flex: 1;
+  min-height: 400px;
+  flex-direction: column;
+  align-items: center;
+}
+
+#info-right h1 {
+  margin: 36px 0 0 36px;
+  width: 50vh;
+  font-size: 30px;
+  align-self: flex-start;
+  color: black !important;
+}
+
+#info-right h2 {
+  margin: 0 0 36px 36px !important;
+  font-size: 20px;
+  width: auto;
+  align-self: flex-start;
+  color: #c2c7cd !important;
+}
+
+#hour-title {
+  display: flex;
+  width: 235px;
+  justify-content: space-between;
+}
+
+#hour-title h3 {
+  display: flex;
+  margin: 10px 0 0 0;
+  margin-right: 30px !important;
+}
+
+#info-right h3 {
+  padding: 0;
+  margin: 10px 0 0 0;
+  font-weight: 600;
+  font-size: 0.8em;
+  margin-right: 200px;
+  color: #324053 !important;
+}
+
+/* button */
+#btn-router-component-filter {
+  user-select: none !important;
+  align-self: center;
+  margin-top: 20px;
+}
+
+#btnFilter {
+  width: 235px !important;
+  font-family: Poppins !important;
+  border-radius: 5px !important;
+  height: 55px !important;
+  border: none;
+  background: #75acff !important;
+  color: #fff !important;
+  cursor: pointer !important;
+  user-select: none !important;
+}
+
+#btnFilter:hover {
+  transform: scale(0.95);
+  transition: all 0.2s;
+  box-shadow: 0px 0px 30px 0px rgba(150, 150, 150, 0.1);
+}
+
+#btnFilter:active {
+  transform: scale(0.98);
+  transition: all 0.2s;
+  box-shadow: 0px 0px 30px 0px rgba(150, 150, 150, 0.1);
+}
+
+.inputs {
+  border: 0;
+  width: 240px;
+  font-family: Poppins;
+  background: #d8e0ff;
+  color: #396ae5;
+  padding: 10px 20px 10px 20px;
+  margin: 4px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#card-filter input {
+  border: 0;
+  width: 200px;
+  font-family: Poppins;
+  background: #d8e0ff;
+  color: #396ae5;
+  padding: 10px 20px 10px 20px;
+  margin: 4px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.inputs::placeholder {
+  color: #396ae5;
+  font-family: Poppins;
+  font-size: 1.1em;
+  text-align: center;
+}
+.inputs:active {
+  user-select: none;
+}
+
+.inputs:hover {
+  border: 0 solid;
+  user-select: none;
+  transform: scale(0.99);
+  transition: all 0.2s;
+  box-shadow: 0px 0px 10px 0px rgba(150, 150, 150, 0.1);
+}
+
+.inputs:focus {
+  outline: none;
+  transform: scale(1.01);
+}

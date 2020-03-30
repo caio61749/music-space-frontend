@@ -1,0 +1,13 @@
+#card-box {
+  position: relative;
+  bottom: 110px;
+  animation: SlideUP 1.5s;
+}
+@keyframes SlideUP {
+  0% {
+    transform: translateY(60%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
